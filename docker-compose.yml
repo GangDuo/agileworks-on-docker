@@ -6,6 +6,8 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: example
+    cap_add: # mbind: Operation not permitted
+      - SYS_NICE
 
   adminer:
     image: adminer
