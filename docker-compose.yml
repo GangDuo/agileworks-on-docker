@@ -5,3 +5,13 @@ services:
     build: ./apache
     ports:
       - "80:80"
+    depends_on:
+      - "tomcat"
+
+  tomcat:
+    container_name: tomcat-container
+    build: ./tomcat
+    expose:
+      - "8009"
+    environment:
+      TZ: Asia/Tokyo
