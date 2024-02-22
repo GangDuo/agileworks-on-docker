@@ -10,6 +10,7 @@ services:
       - SYS_NICE
     volumes:
       - ./mysql/conf.d:/etc/mysql/conf.d
+      - ./mysql/initdb.d:/docker-entrypoint-initdb.d
 
   adminer:
     image: adminer
