@@ -8,6 +8,8 @@ services:
       MYSQL_ROOT_PASSWORD: example
     cap_add: # mbind: Operation not permitted
       - SYS_NICE
+    volumes:
+      - ./mysql/conf.d:/etc/mysql/conf.d
 
   adminer:
     image: adminer
