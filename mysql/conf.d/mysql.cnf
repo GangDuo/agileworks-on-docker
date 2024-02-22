@@ -26,4 +26,19 @@
 # For explanations see
 # http://dev.mysql.com/doc/mysql/en/server-system-variables.html
 
-[mysql]
+[client]
+default-character-set=utf8
+
+[mysqld]
+character-set-server=utf8
+log_bin_trust_function_creators=1
+expire_logs_days=10
+binlog_format=mixed
+default-storage-engine=InnoDB
+max_allowed_packet=8M
+sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
+
+innodb_buffer_pool_size=4096M
+table_open_cache=1024
+max_connections=400
+thread_cache_size=8
