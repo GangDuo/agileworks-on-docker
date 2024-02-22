@@ -1,5 +1,6 @@
 FROM tomcat:9.0.85-jdk8-temurin-jammy
 COPY ./server.xml /usr/local/tomcat/conf/
+COPY ./ROOT.xml /usr/local/tomcat/conf/Catalina/localhost/
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     locales \
