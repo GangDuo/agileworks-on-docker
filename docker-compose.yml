@@ -36,3 +36,5 @@ services:
       LANG: ja_JP.UTF8
       LC_ALL: ja_JP.UTF8
       CATALINA_OPTS: "-server -Xmx8192M -Xms8192M -XX:MetaspaceSize=128M -XX:MaxMetaspaceSize=1024M -Dfile.encoding=UTF-8"
+    depends_on:
+      - "db"
