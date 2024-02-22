@@ -1,2 +1,7 @@
 FROM tomcat:9.0.85-jdk8-temurin-jammy
 COPY ./server.xml /usr/local/tomcat/conf/
+
+RUN apt-get update && apt-get install -y locales \
+ && locale-gen ja_JP \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
