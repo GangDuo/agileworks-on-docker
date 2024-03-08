@@ -5,7 +5,7 @@ RUN dnf -y install sudo \
            glibc-langpack-ja \
            initscripts \
     && dnf clean all \
-  	&& rm -rf /var/cache/yum
+    && rm -rf /var/cache/yum
 
 ENV LANG="ja_JP UTF-8" \
     LANGUAGE="ja_JP:ja" \
