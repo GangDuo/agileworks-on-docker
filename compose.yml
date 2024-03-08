@@ -41,3 +41,9 @@ services:
     volumes:
       - ./tomcat/AgileWorksInstaller:/mnt/AgileWorksInstaller
 
+  asb:
+    container_name: asb-container
+    build: ./asb
+    image: aw-service-asb-base
+    volumes:
+      - ./asb/AgileWorksInstaller:/mnt/AgileWorksInstaller

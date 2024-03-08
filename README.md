@@ -7,6 +7,9 @@
       - [1.3.2.1. 各種ソフトウェアのパス](#1321-各種ソフトウェアのパス)
   - [1.4. AgileWorksアクセス方法](#14-agileworksアクセス方法)
   - [1.5. ライセンス認証](#15-ライセンス認証)
+- [2. ASBを利用する](#2-asbを利用する)
+  - [2.1. image作成](#21-image作成)
+  - [2.2. ASBサーバー設定](#22-asbサーバー設定)
 
 # 1. はじめに
 ## 1.1. 準備
@@ -50,3 +53,14 @@ sh installer.sh
 1. コンテナを再起動する。
 1. サポートサイトにアクセスし、開発環境のライセンスキーを取得する。
 1. 認証する。
+
+# 2. ASBを利用する
+## 2.1. image作成
+```bash
+docker compose up asb
+docker compose exec -it asb sh /mnt/AgileWorksInstaller/AgileWorksR2121_SDK/installer.sh
+```
+
+## 2.2. ASBサーバー設定
+1. AgileWorks開発環境にアクセスする。
+2. ASBサーバー設定のサーバーアドレスに asb を入力し、保存ボタンをクリックする。
